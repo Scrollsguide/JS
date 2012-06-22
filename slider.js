@@ -10,8 +10,8 @@ var direction = 1; // 1 = right, -1 = left, init direction
 
 var slideTimer;
 
-$(document).ready(function(){
-	slideId = $("#slidercontent");
+jQuery(document).ready(function(){
+	slideId = jQuery("#slidercontent");
 	
 	slideWidth = slideId.children().eq(0).width();
 	numSlides = slideId.children().length;
