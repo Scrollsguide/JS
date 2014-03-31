@@ -2,16 +2,15 @@ jQuery(document).ready(function(){
 	// array of words with their replacements
 	var words = {
 
-		"Awesome": 	"Awful",
-		"Amazing": 	"Awful",
-		"Nice": 	"Strange",
-		"April": 	"January",
-		"Fools": 	"Genius",
-		"Day": 		"Year",
-		"Prank": 	"filibuster",
+		"growth": 	"energy",
+		"energy": 	"order",
+		"order": 	"decay",
+		"decay": 	"growth",
+		"blinky":	"Blanko",
+		"mojang":	"Bethesda"
 		
 	};
-			
+	
 	var w = {};
 	
 	/**
@@ -30,10 +29,10 @@ jQuery(document).ready(function(){
 	}
 	
 	/**
-	 *	Replace the words, only search in <div class="post"></div>
+	 *	Replace the words
 	 *	Create a Regexp for case-insensitive, global, multiline matching
 	 */
-	jQuery(".post").each(function(){				
+	jQuery(".topictitle, .postbody").each(function(){				
 		for (var s in w){
 			var r = new RegExp(s, "gmi");
 			jQuery(this).html((jQuery(this).html()).replace(r, w[s]));
